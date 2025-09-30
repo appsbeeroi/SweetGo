@@ -64,7 +64,7 @@ struct ShoppingCartProductCellView: View {
                         }
                         .frame(height: 30)
                         .padding(.horizontal, 10)
-                        .background(.sgLightPink)
+                        .background(.sGlightPink)
                         .cornerRadius(20)
                     }
                     
