@@ -51,7 +51,8 @@ final class ProductsViewModel: ObservableObject {
             }
             
             for (index, product) in udProducts.enumerated() {
-                if !products.contains(product) {
+                if !products.contains(product),
+                   udProducts.count >= index + 1{
                     udProducts.remove(at: index)
                 }
             }

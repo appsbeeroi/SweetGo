@@ -64,6 +64,8 @@ struct OrderConfirmationView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .font(.impact(with: 35))
                 .foregroundStyle(.sgDarkRed)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .padding(.horizontal, 35)
     }

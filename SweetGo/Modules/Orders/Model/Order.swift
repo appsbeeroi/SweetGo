@@ -11,6 +11,14 @@ struct Order: Identifiable, Equatable, Codable {
         point == nil
     }
     
+    init() {
+        self.id = UUID()
+        self.productType = .candies
+        self.products = [Product(isMock: true)]
+        self.point = PickupPoint.mocks.first!
+        self.status = .created
+    }
+    
     init(productType: ProductType, products: [Product]) {
         self.id = UUID()
         self.productType = productType

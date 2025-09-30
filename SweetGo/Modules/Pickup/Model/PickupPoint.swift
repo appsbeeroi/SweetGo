@@ -5,6 +5,7 @@ struct PickupPoint: Codable, Identifiable, Equatable {
     let schedule: String
     let comments: String
     let code: String
+    var isFavorite: Bool = false 
 }
 
 extension PickupPoint {

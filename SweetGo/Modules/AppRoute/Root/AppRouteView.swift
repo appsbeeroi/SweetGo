@@ -28,13 +28,17 @@ struct AppRouteView: View {
                     .tag(AppRouteState.settings)
             }
             
-            VStack {
-                tabBar
-                    .opacity(isShowTabBar ? 1 : 0)
-                    .animation(.easeInOut, value: isShowTabBar)
+            GeometryReader { geo in
+                VStack {
+                    tabBar
+                        .opacity(isShowTabBar ? 1 : 0)
+                        .animation(.easeInOut, value: isShowTabBar)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(maxHeight: .infinity, alignment: .bottom)
+                .padding(.bottom, 24)
             }
-            .frame(maxHeight: .infinity, alignment: .bottom)
-            .padding(.bottom, 24)
+            .ignoresSafeArea(.keyboard)
         }
     }
     

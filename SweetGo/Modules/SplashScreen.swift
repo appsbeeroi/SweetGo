@@ -17,7 +17,7 @@ struct SplashScreen: View {
                     .scaledToFit()
                     .frame(width: 250, height: 250)
                     
-                Text("EggCourier")
+                Text("SweetGO")
                     .font(.impact(with: 61))
                     .foregroundStyle(.sgDarkRed)
             }
@@ -27,7 +27,7 @@ struct SplashScreen: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     isAnimating = true
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                         isOnboardingEnded = true 
                     }
                 }
