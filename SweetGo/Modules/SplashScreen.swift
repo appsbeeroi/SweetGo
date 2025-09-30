@@ -17,7 +17,7 @@ struct SplashScreen: View {
                     .scaledToFit()
                     .frame(width: 250, height: 250)
                     
-                Text("SweetGO")
+                Text("SweetsGO")
                     .font(.impact(with: 61))
                     .foregroundStyle(.sgDarkRed)
             }

@@ -12,7 +12,7 @@ extension PickupPoint {
     static let mocks: [PickupPoint] = [
         .init(
             id: 1,
-            name: "SweetGo Central Hub",
+            name: "SweetsGo Central Hub",
             address: "Gedimino pr. 9, Vilnius 01103",
             schedule: "Mon-Fri 09:00-19:00, Sat-Sun 10:00-18:00",
             comments: "Main collection point, near the metro station",
