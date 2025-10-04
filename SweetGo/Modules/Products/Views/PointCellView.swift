@@ -12,13 +12,13 @@ struct PointCellView: View {
         } label: {
             HStack(spacing: 6) {
                 Circle()
-                    .stroke(.sgPink, lineWidth: 1)
+                    .stroke(.basePink, lineWidth: 1)
                     .frame(width: 27, height: 27)
                     .overlay {
                         if selectedPoint == point {
                             Circle()
                                 .frame(width: 25, height: 25)
-                                .foregroundStyle(.sgPink)
+                                .foregroundStyle(.basePink)
                         }
                     }
                 
@@ -40,7 +40,7 @@ struct PointCellView: View {
                             .resizable()
                             .scaledToFit()
                             .frame(width: 18, height: 18)
-                            .foregroundStyle(.sgPink)
+                            .foregroundStyle(.basePink)
                         
                         Text(point.address)
                             .frame(maxWidth: .infinity, alignment: .leading)

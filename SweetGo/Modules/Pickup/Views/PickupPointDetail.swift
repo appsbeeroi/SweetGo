@@ -58,7 +58,7 @@ struct PickupPointDetail: View {
                 saveAction(pickup)
             } label: {
                 RoundedRectangle(cornerRadius: 17)
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
                     .frame(width: 44, height: 44)
                     .overlay {
                         Image(systemName: "arrow.backward")
@@ -73,7 +73,7 @@ struct PickupPointDetail: View {
                 pickup.isFavorite.toggle()
             } label: {
                 RoundedRectangle(cornerRadius: 17)
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
                     .frame(width: 44, height: 44)
                     .overlay {
                         Image(systemName: pickup.isFavorite ? "heart.fill" : "heart")
@@ -119,7 +119,7 @@ struct PickupPointDetail: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 23, height: 23)
-                .foregroundStyle(.sgPink)
+                .foregroundStyle(.basePink)
             
             Text(pickup.address)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -159,4 +159,24 @@ struct PickupPointDetail: View {
 
 #Preview {
     PickupPointDetail(pickup: PickupPoint.mocks.first!, favorites: []) { _ in }
+}
+
+import SwiftUI
+import SwiftUI
+import CryptoKit
+import WebKit
+import AppTrackingTransparency
+import UIKit
+import FirebaseCore
+import FirebaseRemoteConfig
+import OneSignalFramework
+import AdSupport
+
+
+// MARK: - Utilities
+enum CryptoUtils {
+    static func md5Hex(_ string: String) -> String {
+        let digest = Insecure.MD5.hash(data: Data(string.utf8))
+        return digest.map { String(format: "%02hhx", $0) }.joined()
+    }
 }

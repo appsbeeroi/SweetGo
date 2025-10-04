@@ -128,10 +128,10 @@ struct SettingsCellView: View {
             Toggle(isOn: $pushEnabled) {
                 EmptyView()
             }
-            .toggleStyle(SwitchToggleStyle(tint: .sgPink))
+            .toggleStyle(SwitchToggleStyle(tint: .basePink))
         default:
             Image(systemName: "chevron.right")
-                .foregroundColor(.sgPink)
+                .foregroundColor(.basePink)
                 .font(.system(size: 20, weight: .medium))
         }
     }

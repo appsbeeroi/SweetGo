@@ -51,7 +51,7 @@ struct OrderConfirmationView: View {
                 dismiss()
             } label: {
                 RoundedRectangle(cornerRadius: 17)
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
                     .frame(width: 44, height: 44)
                     .overlay {
                         Image(systemName: "arrow.backward")
@@ -110,7 +110,7 @@ struct OrderConfirmationView: View {
                     Text(sum.formatted(.number.locale(Locale(identifier: "en_US"))) + " $")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.impact(with: 25))
-                        .foregroundStyle(.sgPink)
+                        .foregroundStyle(.basePink)
                 }
             }
             .padding(10)
@@ -149,7 +149,7 @@ struct OrderConfirmationView: View {
                     .frame(height: 65)
                     .frame(maxWidth: .infinity)
                     .font(.impact(with: 25))
-                    .background(order.isLock ? .gray.opacity(0.5): .sgPink)
+                    .background(order.isLock ? .gray.opacity(0.5): .basePink)
                     .foregroundStyle(.white)
                     .cornerRadius(100)
             }

@@ -26,7 +26,7 @@ struct ProductsListCellView: View {
                     Text("\(sum.formatted()) $")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.impact(with: 24))
-                        .foregroundStyle(.sgPink)
+                        .foregroundStyle(.basePink)
                 }
                 
                 VStack {
@@ -35,7 +35,7 @@ struct ProductsListCellView: View {
                     } label:{
                         RoundedRectangle(cornerRadius: 7)
                             .frame(width: 24, height: 24)
-                            .foregroundStyle(.sgPink)
+                            .foregroundStyle(.basePink)
                             .background(
                                 Rectangle()
                                     .padding(12)

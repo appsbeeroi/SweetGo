@@ -16,7 +16,7 @@ struct SplashScreen: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250, height: 250)
-                    
+                
                 Text("SweetsGO")
                     .font(.impact(with: 61))
                     .foregroundStyle(.sgDarkRed)
@@ -26,10 +26,11 @@ struct SplashScreen: View {
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     isAnimating = true
-                    
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                        isOnboardingEnded = true 
-                    }
+                }
+            }
+            .onReceive(NotificationCenter.default.publisher(for: .splashTransition)) { _ in
+                withAnimation {
+                    isOnboardingEnded = true
                 }
             }
         }

@@ -62,7 +62,7 @@ struct AddProductView: View {
             } label: {
                 RoundedRectangle(cornerRadius: 17)
                     .frame(width: 44, height: 44)
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
                     .overlay {
                         Image(systemName: "arrow.backward")
                             .font(.system(size: 20, weight: .medium))
@@ -132,7 +132,7 @@ struct AddProductView: View {
                 
                 Text(quantity.formatted())
                     .font(.impact(with: 20))
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
                 
                 Button {
                     quantity += 1
@@ -156,7 +156,7 @@ struct AddProductView: View {
         Text((type.price * Double(quantity)).formatted(.number.locale(Locale(identifier: "en_US"))) + " $")
             .frame(maxWidth: .infinity, alignment: .trailing)
             .font(.impact(with: 45))
-            .foregroundStyle(.sgPink)
+            .foregroundStyle(.basePink)
             .animation(.default, value: quantity)
     }
     
@@ -168,7 +168,7 @@ struct AddProductView: View {
                 .frame(height: 65)
                 .frame(maxWidth: .infinity)
                 .font(.impact(with: 25))
-                .background(.sgPink)
+                .background(.basePink)
                 .foregroundStyle(.white)
                 .cornerRadius(100)
         }

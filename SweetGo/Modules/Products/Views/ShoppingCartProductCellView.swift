@@ -49,7 +49,7 @@ struct ShoppingCartProductCellView: View {
                             
                             Text(product.quantity.formatted())
                                 .font(.impact(with: 20))
-                                .foregroundStyle(.sgPink)
+                                .foregroundStyle(.basePink)
                                 .fixedSize()
                             
                             Button {
@@ -64,7 +64,7 @@ struct ShoppingCartProductCellView: View {
                         }
                         .frame(height: 30)
                         .padding(.horizontal, 10)
-                        .background(.sGlightPink)
+                        .background(.baseLightPink)
                         .cornerRadius(20)
                     }
                     
@@ -76,7 +76,7 @@ struct ShoppingCartProductCellView: View {
                 
                 Text(product.totalPrice.formatted(.number.locale(Locale(identifier: "en_US"))) + " $")
                     .font(.impact(with: 25))
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
             }
         }
         .padding(10)

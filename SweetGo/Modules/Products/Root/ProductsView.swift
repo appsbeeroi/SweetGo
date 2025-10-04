@@ -61,7 +61,7 @@ struct ProductsView: View {
                     isShowCartView.toggle()
                 } label: {
                     RoundedRectangle(cornerRadius: 17)
-                        .foregroundStyle(.sgPink)
+                        .foregroundStyle(.basePink)
                         .frame(width: 44, height: 44)
                         .overlay {
                             Image(systemName: "cart.fill")

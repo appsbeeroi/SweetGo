@@ -53,7 +53,7 @@ struct ShoppingCartView: View {
                     saveAction(products)
                 } label: {
                     RoundedRectangle(cornerRadius: 17)
-                        .foregroundStyle(.sgPink)
+                        .foregroundStyle(.basePink)
                         .frame(width: 44, height: 44)
                         .overlay {
                             Image(systemName: "arrow.backward")
@@ -115,7 +115,7 @@ struct ShoppingCartView: View {
                 
                 Text(sum.formatted(.number.locale(Locale(identifier: "en_US"))) + " $")
                     .font(.impact(with: 45))
-                    .foregroundStyle(.sgPink)
+                    .foregroundStyle(.basePink)
             }
             
             Button {
@@ -126,7 +126,7 @@ struct ShoppingCartView: View {
                     .frame(maxWidth: .infinity)
                     .font(.impact(with: 25))
                     .foregroundStyle(.white)
-                    .background(.sgPink)
+                    .background(.basePink)
                     .cornerRadius(100)
             }
         }
